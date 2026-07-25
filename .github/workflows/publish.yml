@@ -2,7 +2,16 @@ name: Publish Docker Containers
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: publish-${{ github.ref }}
+  cancel-in-progress: false
 
 env:
   REGISTRY: ghcr.io
@@ -10,9 +19,7 @@ env:
 jobs:
   build-and-push-images:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
+    timeout-minutes: 45
 
     steps:
       - name: Checkout repository
@@ -30,9 +37,9 @@ jobs:
 
       - name: Lowercase Repository Owner
         id: repo_owner
-        run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> $GITHUB_OUTPUT
+        run: echo "owner=${GITHUB_REPOSITORY_OWNER,,}" >> "$GITHUB_OUTPUT"
 
-      - name: Extract metadata (tags, labels) for Backend
+      - name: Extract metadata for Backend
         id: meta-backend
         uses: docker/metadata-action@v5
         with:
@@ -49,8 +56,10 @@ jobs:
           push: true
           tags: ${{ steps.meta-backend.outputs.tags }}
           labels: ${{ steps.meta-backend.outputs.labels }}
+          cache-from: type=gha,scope=backend
+          cache-to: type=gha,scope=backend,mode=max
 
-      - name: Extract metadata (tags, labels) for Frontend
+      - name: Extract metadata for Frontend
         id: meta-frontend
         uses: docker/metadata-action@v5
         with:
@@ -68,4 +77,6 @@ jobs:
           tags: ${{ steps.meta-frontend.outputs.tags }}
           labels: ${{ steps.meta-frontend.outputs.labels }}
           build-args: |
-            VITE_API_URL=http://localhost:8080/api/v1
+            VITE_API_URL=${{ vars.VITE_API_URL }}
+          cache-from: type=gha,scope=frontend
+          cache-to: type=gha,scope=frontend,mode=max
