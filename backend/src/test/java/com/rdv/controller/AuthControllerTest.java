@@ -19,9 +19,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-
 import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -31,23 +29,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc(addFilters = false)
 class AuthControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @Autowired
-    private ObjectMapper objectMapper;
+    @Autowired private ObjectMapper objectMapper;
 
-    @MockitoBean
-    private AdminAuthService adminAuthService;
+    @MockitoBean private AdminAuthService adminAuthService;
 
-    @MockitoBean
-    private JwtTokenProvider jwtTokenProvider;
+    @MockitoBean private JwtTokenProvider jwtTokenProvider;
 
-    @MockitoBean
-    private RestAuthenticationEntryPoint authenticationEntryPoint;
+    @MockitoBean private RestAuthenticationEntryPoint authenticationEntryPoint;
 
-    @MockitoBean
-    private RestAccessDeniedHandler accessDeniedHandler;
+    @MockitoBean private RestAccessDeniedHandler accessDeniedHandler;
 
     @Test
     void login_ShouldReturn200() throws Exception {
