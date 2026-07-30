@@ -11,9 +11,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.util.Map;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -22,20 +21,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc(addFilters = false)
 class HealthControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @Autowired
-    private com.fasterxml.jackson.databind.ObjectMapper objectMapper;
+    @Autowired private ObjectMapper objectMapper;
 
-    @MockitoBean
-    private JwtTokenProvider jwtTokenProvider;
+    @MockitoBean private JwtTokenProvider jwtTokenProvider;
 
-    @MockitoBean
-    private RestAuthenticationEntryPoint authenticationEntryPoint;
+    @MockitoBean private RestAuthenticationEntryPoint authenticationEntryPoint;
 
-    @MockitoBean
-    private RestAccessDeniedHandler accessDeniedHandler;
+    @MockitoBean private RestAccessDeniedHandler accessDeniedHandler;
 
     @Test
     void health_ShouldReturn200WithStatusUp() throws Exception {
