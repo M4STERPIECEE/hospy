@@ -36,7 +36,7 @@ export const AppointmentsPage = () => {
         service: 'Consultation générale'
     });
     const [currentPage] = useState(0);
-    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080/api/v1';
 
     const fetchAppointments = useCallback(async () => {
         setIsLoading(true);

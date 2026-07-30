@@ -20,7 +20,7 @@ public class PublicBookingController {
 
     private final PublicBookingService publicBookingService;
 
-    @PostMapping("/api/public/bookings")
+    @PostMapping("/public/bookings")
     public ResponseEntity<PublicBookingResponse> createPublicBooking(@Valid @RequestBody PublicBookingRequest request) {
         PublicBookingResponse response = publicBookingService.book(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
