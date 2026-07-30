@@ -13,7 +13,7 @@ export const PatientsPage = () => {
     const [currentPage] = useState(0);
     const [totalElements, setTotalElements] = useState(0);
 
-    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080/api/v1';
 
     const fetchPatients = useCallback(async () => {
         setIsLoading(true);

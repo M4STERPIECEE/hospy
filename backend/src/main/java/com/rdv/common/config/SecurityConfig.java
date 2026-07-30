@@ -33,8 +33,8 @@ public class SecurityConfig {
                 .accessDeniedHandler(accessDeniedHandler)
             )
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/public/**", "/public/**", "/api/auth/**", "/auth/**", "/appointments/public", "/health").permitAll()
-                .requestMatchers("/api/admin/**", "/admin/**").hasRole("ADMIN")
+                .requestMatchers("/api/v1/public/**", "/api/v1/auth/**", "/api/v1/appointments/public", "/api/v1/health").permitAll()
+                .requestMatchers("/api/v1/admin/**").hasRole("ADMIN")
                 .anyRequest().permitAll() // Permit rest for compatibility while maintaining route protections
             )
             .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
