@@ -13,7 +13,7 @@ export const ResetPasswordForm = () => {
     const [error, setError] = useState<string | null>(null);
     const [info, setInfo] = useState<string | null>(null);
 
-    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8080/api/v1';
+    const apiBase = import.meta.env.VITE_API_URL || 'http://localhost:8080';
     const token = (search as { token?: string }).token ?? '';
 
     const form = useForm({
