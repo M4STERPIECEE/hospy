@@ -2,8 +2,13 @@ package com.rdv.user;
 
 import com.rdv.user.dto.UserRequest;
 import com.rdv.user.dto.UserResponse;
+import com.rdv.user.entity.User;
+import com.rdv.user.entity.UserRole;
 import com.rdv.user.exception.DuplicateEmailException;
 import com.rdv.user.exception.UserNotFoundException;
+import com.rdv.user.mapper.UserMapper;
+import com.rdv.user.repository.UserRepository;
+import com.rdv.user.service.UserServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,7 +20,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)

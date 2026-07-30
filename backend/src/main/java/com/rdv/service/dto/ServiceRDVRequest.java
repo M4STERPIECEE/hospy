@@ -1,6 +1,6 @@
 package com.rdv.service.dto;
 
-import com.rdv.service.ServiceStatus;
+import com.rdv.service.entity.ServiceStatus;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

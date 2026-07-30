@@ -1,16 +1,19 @@
 package com.rdv.booking;
 
-import com.rdv.appointment.AppointmentService;
-import com.rdv.appointment.AppointmentStatus;
 import com.rdv.appointment.dto.AppointmentRequest;
 import com.rdv.appointment.dto.AppointmentResponse;
-import com.rdv.service.ServiceRDVService;
-import com.rdv.service.ServiceStatus;
+import com.rdv.appointment.entity.AppointmentStatus;
+import com.rdv.appointment.service.AppointmentService;
+import com.rdv.booking.dto.PublicBookingRequest;
+import com.rdv.booking.dto.PublicBookingResponse;
+import com.rdv.booking.service.PublicBookingServiceImpl;
 import com.rdv.service.dto.ServiceRDVResponse;
-import com.rdv.user.UserRole;
-import com.rdv.user.UserService;
+import com.rdv.service.entity.ServiceStatus;
+import com.rdv.service.service.ServiceRDVService;
 import com.rdv.user.dto.UserRequest;
 import com.rdv.user.dto.UserResponse;
+import com.rdv.user.entity.UserRole;
+import com.rdv.user.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

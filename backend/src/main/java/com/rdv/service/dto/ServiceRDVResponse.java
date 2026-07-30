@@ -1,6 +1,6 @@
 package com.rdv.service.dto;
 
-import com.rdv.service.ServiceStatus;
+import com.rdv.service.entity.ServiceStatus;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
 import java.util.UUID;

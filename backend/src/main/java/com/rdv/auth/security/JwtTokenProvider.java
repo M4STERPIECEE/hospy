@@ -2,8 +2,6 @@ package com.rdv.auth.security;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
-
-import java.util.Date;
 import java.util.UUID;
 
 @Component

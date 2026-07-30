@@ -1,6 +1,6 @@
 package com.rdv.user.dto;
 
-import com.rdv.user.UserRole;
+import com.rdv.user.entity.UserRole;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 

@@ -2,11 +2,14 @@ package com.rdv.appointment;
 
 import com.rdv.appointment.dto.AppointmentRequest;
 import com.rdv.appointment.dto.AppointmentResponse;
+import com.rdv.appointment.entity.Appointment;
+import com.rdv.appointment.entity.AppointmentStatus;
 import com.rdv.appointment.exception.AppointmentNotFoundException;
-import com.rdv.service.ServiceRDV;
-import com.rdv.service.ServiceRDVService;
-import com.rdv.user.User;
-import com.rdv.user.UserService;
+import com.rdv.appointment.mapper.AppointmentMapper;
+import com.rdv.appointment.repository.AppointmentRepository;
+import com.rdv.appointment.service.AppointmentServiceImpl;
+import com.rdv.service.service.ServiceRDVService;
+import com.rdv.user.service.UserService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,6 +1,6 @@
 package com.rdv.appointment.dto;
 
-import com.rdv.appointment.AppointmentStatus;
+import com.rdv.appointment.entity.AppointmentStatus;
 import jakarta.validation.constraints.NotNull;
 
 import java.time.ZonedDateTime;

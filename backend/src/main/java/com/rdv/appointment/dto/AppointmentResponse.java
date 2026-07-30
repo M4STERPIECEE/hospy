@@ -1,6 +1,6 @@
 package com.rdv.appointment.dto;
 
-import com.rdv.appointment.AppointmentStatus;
+import com.rdv.appointment.entity.AppointmentStatus;
 import com.rdv.service.dto.ServiceRDVResponse;
 import com.rdv.user.dto.UserResponse;
 

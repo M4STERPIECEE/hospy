@@ -1,7 +1,7 @@
 package com.rdv.common.config;
 
-import com.rdv.auth.Admin;
-import com.rdv.auth.AdminRepository;
+import com.rdv.auth.entity.Admin;
+import com.rdv.auth.repository.AdminRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;

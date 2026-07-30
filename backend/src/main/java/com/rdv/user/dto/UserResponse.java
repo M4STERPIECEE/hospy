@@ -1,6 +1,6 @@
 package com.rdv.user.dto;
 
-import com.rdv.user.UserRole;
+import com.rdv.user.entity.UserRole;
 import java.time.ZonedDateTime;
 import java.util.UUID;
 
