@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/services")
+@RequestMapping("api/${version.path}/services")
 @RequiredArgsConstructor
 public class ServiceRDVController {
 

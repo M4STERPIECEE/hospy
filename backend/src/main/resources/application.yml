@@ -29,6 +29,9 @@ spring:
 server:
   port: ${SERVER_PORT:8080}
 
+version:
+  path: v1
+
 app:
   admin:
     email: ${ADMIN_EMAIL}
