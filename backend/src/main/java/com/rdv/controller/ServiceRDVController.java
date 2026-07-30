@@ -1,4 +1,4 @@
-package com.rdv.api.v1.controller;
+package com.rdv.controller;
 
 import com.rdv.entity.ServiceRDV;
 import com.rdv.service.ServiceRDVService;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/services")
+@RequestMapping("/services")
 @RequiredArgsConstructor
 @Validated
 public class ServiceRDVController {

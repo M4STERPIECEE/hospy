@@ -1,4 +1,4 @@
-package com.rdv.api.v1.controller;
+package com.rdv.controller;
 
 import com.rdv.entity.User;
 import com.rdv.service.UserService;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/users")
+@RequestMapping("/users")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT,
         RequestMethod.DELETE, RequestMethod.PATCH, RequestMethod.OPTIONS })

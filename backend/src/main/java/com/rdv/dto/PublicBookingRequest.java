@@ -1,4 +1,4 @@
-package com.rdv.api.v1.dto;
+package com.rdv.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

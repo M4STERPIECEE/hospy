@@ -1,10 +1,10 @@
-package com.rdv.api.v1.controller;
+package com.rdv.controller;
 
-import com.rdv.api.v1.dto.AdminResetConfirm;
-import com.rdv.api.v1.dto.AdminResetRequest;
-import com.rdv.api.v1.dto.AdminResetResponse;
-import com.rdv.api.v1.dto.LoginRequest;
-import com.rdv.api.v1.dto.LoginResponse;
+import com.rdv.dto.AdminResetConfirm;
+import com.rdv.dto.AdminResetRequest;
+import com.rdv.dto.AdminResetResponse;
+import com.rdv.dto.LoginRequest;
+import com.rdv.dto.LoginResponse;
 import com.rdv.service.AdminAuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/auth")
+@RequestMapping("/auth")
 @RequiredArgsConstructor
 public class AuthController {
     private final AdminAuthService adminAuthService;

@@ -1,6 +1,6 @@
-package com.rdv.api.v1.controller;
+package com.rdv.controller;
 
-import com.rdv.api.v1.dto.PublicBookingRequest;
+import com.rdv.dto.PublicBookingRequest;
 import com.rdv.entity.Appointment;
 import com.rdv.service.AppointmentService;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("/api/v1/appointments")
+@RequestMapping("/appointments")
 @RequiredArgsConstructor
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods = {
         RequestMethod.GET,

@@ -34,7 +34,7 @@ export const BookingForm = () => {
     const [error, setError] = useState<string | null>(null);
     const [isFormSubmitting, setIsFormSubmitting] = useState(false);
 
-    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080/api/v1';
+    const apiBase = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
 
     const form = useAppForm({
         defaultValues: {
